@@ -32,7 +32,7 @@ pipeline {
 
     stage('Zipping') {
       steps {
-        sh 'tar -xzfv nodejsempty.tar.gz *'
+        sh 'tar -zcvf nodejsempty.tar.gz *'
       }
     }
 
