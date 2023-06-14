@@ -30,5 +30,17 @@ pipeline {
       }
     }
 
+    stage('Zipping') {
+      steps {
+        sh 'tar -xzfv NodeJSEmpty.tar.gz *'
+      }
+    }
+
+    stage('Archiving') {
+      steps {
+        archiveArtifacts 'NodeJSEmpty.tar.gz'
+      }
+    }
+
   }
 }
