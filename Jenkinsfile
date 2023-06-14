@@ -20,13 +20,13 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'npm build'
+        sh 'node server.js &'
       }
     }
 
     stage('Integration test') {
       steps {
-        sh 'cp target/*.war /opt/tomcat/latest/webapps/'
+        sh 'curl localhost:8080'
       }
     }
 
