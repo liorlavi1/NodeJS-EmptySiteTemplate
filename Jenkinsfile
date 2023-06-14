@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Integration test') {
+      steps {
+        sh 'cp target/*.war /opt/tomcat/latest/webapps/'
+      }
+    }
+
   }
 }
