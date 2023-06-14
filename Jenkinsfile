@@ -14,19 +14,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'mvn compile'
+        sh 'npm install'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'mvn test'
-      }
-    }
-
-    stage('Package') {
-      steps {
-        sh 'mvn clean package'
+        sh 'npm test'
       }
     }
 
