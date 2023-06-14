@@ -32,13 +32,13 @@ pipeline {
 
     stage('Zipping') {
       steps {
-        sh 'tar -xzfv NodeJSEmpty.tar.gz *'
+        sh 'tar -xzfv nodejsempty.tar.gz *'
       }
     }
 
     stage('Archiving') {
       steps {
-        archiveArtifacts 'NodeJSEmpty.tar.gz'
+        archiveArtifacts 'nodejsempty.tar.gz'
       }
     }
 
